@@ -6,8 +6,24 @@
   font-size: $font-size-large;
   font-weight: 300;
   line-height: 1;
+  margin-bottom: $s-size;
   padding: $s-size;
   text-decoration: none;
+  width: 20rem;
+  transition: all .3s cubic-bezier(.25,.8,.25,1);
+
+  &:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+
+  &.google {
+    background: $google-red;
+  }
+
+  &.facebook {
+    background: $facebook-blue;
+  }
 }
 
 .button--link {

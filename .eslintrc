@@ -25,6 +25,7 @@
     "jsx-a11y/anchor-is-valid": 0,
     "import/no-named-as-default": 0,
     "no-shadow": 0,
-    "global-require": 0
+    "global-require": 0,
+    "arrow-body-style": 0
   }
 }
