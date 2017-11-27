@@ -23,6 +23,16 @@ export default (state = defaultFilters, action) => {
         ...state,
         endDate: action.endDate
       };
+    case 'SORT_BY_DATE':
+      return {
+        ...state,
+        sortBy: 'date'
+      };
+    case 'SORT_BY_TITLE':
+      return {
+        ...state,
+        sortBy: 'title'
+      };
     default:
       return state;
   }

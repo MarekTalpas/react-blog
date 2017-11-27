@@ -2,7 +2,9 @@ import moment from 'moment';
 import {
   setTextFilter,
   setStartDateFilter,
-  setEndDateFilter
+  setEndDateFilter,
+  sortByDate,
+  sortByTitle
 } from '../../actions/filters';
 
 test('should setup text filter action with text', () => {
@@ -38,4 +40,12 @@ test('should setup end date filter action', () => {
     type: 'END_DATE_FILTER',
     endDate
   });
+});
+
+test('should sort by date correctly', () => {
+  expect(sortByDate()).toEqual({ type: 'SORT_BY_DATE' });
+});
+
+test('should sort by title correctly', () => {
+  expect(sortByTitle()).toEqual({ type: 'SORT_BY_TITLE' });
 });

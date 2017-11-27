@@ -35,3 +35,21 @@ test('should setup state properly for end date filter', () => {
   const state = filtersReducer(undefined, action);
   expect(state.endDate).toBe(endDate);
 });
+
+test('should setup state properly when sort by date is active', () => {
+  const currentState = {
+    text: '',
+    startDate: undefined,
+    endDate: undefined,
+    sortBy: 'title'
+  };
+  const action = { type: 'SORT_BY_DATE' };
+  const state = filtersReducer(currentState, action);
+  expect(state.sortBy).toBe('date');
+});
+
+test('should setup state properly when sort by title is active', () => {
+  const action = { type: 'SORT_BY_TITLE' };
+  const state = filtersReducer(undefined, action);
+  expect(state.sortBy).toBe('title');
+});

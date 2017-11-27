@@ -13,4 +13,12 @@ const setEndDateFilter = endDate => ({
   endDate
 });
 
-export { setTextFilter, setStartDateFilter, setEndDateFilter };
+const sortByDate = () => ({
+  type: 'SORT_BY_DATE'
+});
+
+const sortByTitle = () => ({
+  type: 'SORT_BY_TITLE'
+});
+
+export { setTextFilter, setStartDateFilter, setEndDateFilter, sortByDate, sortByTitle };
