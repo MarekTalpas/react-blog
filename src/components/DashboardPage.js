@@ -1,8 +1,9 @@
 import React from 'react';
+import PostsListFilters from './PostsListFilters';
 
 const DashboardPage = () => (
   <div>
-    Dashboard page content
+    <PostsListFilters />
   </div>
 );
 
