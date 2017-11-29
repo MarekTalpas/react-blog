@@ -7,6 +7,7 @@ import './styles/styles.scss';
 import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { login, logout } from './actions/auth';
+import { initiateGetAllPosts } from './actions/posts';
 import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 
@@ -29,10 +30,12 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     store.dispatch(login(user.uid));
-    renderApp();
-    if (history.location.pathname === '/') {
-      history.push('/dashboard');
-    }
+    store.dispatch(initiateGetAllPosts()).then(() => {
+      renderApp();
+      if (history.location.pathname === '/') {
+        history.push('/dashboard');
+      }
+    });
   } else {
     store.dispatch(logout());
     renderApp();
