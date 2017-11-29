@@ -25,12 +25,12 @@ export const PostsList = ({ posts }) => (
 );
 
 PostsList.propTypes = {
-  posts: PropTypes.shape({
+  posts: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
     createdAt: PropTypes.number.isRequired
-  }).isRequired
+  })).isRequired
 };
 
 const mapStateToProps = state => ({

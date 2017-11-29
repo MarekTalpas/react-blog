@@ -3,7 +3,7 @@ import PostsListFilters from './PostsListFilters';
 import PostsList from './PostsList';
 
 const DashboardPage = () => (
-  <div>
+  <div className="header--dashboard">
     <PostsListFilters />
     <PostsList />
   </div>

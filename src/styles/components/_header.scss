@@ -2,6 +2,10 @@
   background: $dark-blue;
 }
 
+.header--dashboard {
+  padding-top: $l-size;
+}
+
 .header__content {
   align-items: center;
   display: flex;

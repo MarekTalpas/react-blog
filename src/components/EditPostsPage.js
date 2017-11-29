@@ -23,7 +23,7 @@ export class EditPostsPage extends Component {
         <div className="content-container">
           <PostsForm onSubmit={this._handleFormSubmit} post={this.props.post} />
           <button
-            className="button--secondary"
+            className="button button--secondary button--remove"
             onClick={this._handlePostRemove}
           >
             Remove Post
