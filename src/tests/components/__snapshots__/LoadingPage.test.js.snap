@@ -5,6 +5,7 @@ exports[`should correctly render LoadingPage 1`] = `
   className="loader"
 >
   <img
+    alt="circle loader"
     className="loader__image"
     src="/images/loader.gif"
   />

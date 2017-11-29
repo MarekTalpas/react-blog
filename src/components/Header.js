@@ -21,12 +21,8 @@ const mapDispatchToProps = dispatch => ({
   startLogout: () => dispatch(startLogout())
 });
 
-Header.defaultProps = {
-  startLogout: () => {}
-};
-
 Header.propTypes = {
-  startLogout: PropTypes.func
+  startLogout: PropTypes.func.isRequired
 };
 
 export default connect(undefined, mapDispatchToProps)(Header);

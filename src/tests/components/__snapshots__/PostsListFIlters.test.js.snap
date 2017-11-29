@@ -121,6 +121,17 @@ exports[`should render PostsListFilters with alternative values properly 1`] = `
         withPortal={false}
       />
     </div>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        replace={false}
+        to="/create"
+      >
+        Add Post
+      </Link>
+    </div>
   </div>
 </div>
 `;
@@ -245,6 +256,17 @@ exports[`should render PostsListFilters with default values properly 1`] = `
         withFullScreenPortal={false}
         withPortal={false}
       />
+    </div>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        replace={false}
+        to="/create"
+      >
+        Add Post
+      </Link>
     </div>
   </div>
 </div>

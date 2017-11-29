@@ -82,8 +82,8 @@ PostsForm.defaultProps = {
     createdAt: moment().valueOf(),
     content: ''
   },
-  onSubmit: () => {}
-};
+  onSubmit: () => { }
+}
 
 PostsForm.propTypes = {
   post: PropTypes.shape({

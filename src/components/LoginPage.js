@@ -15,8 +15,8 @@ export const LoginPage = ({ startLoginWithGoogle, startLoginWithFacebook }) => (
 );
 
 LoginPage.defaultProps = {
-  startLoginWithGoogle: () => {},
-  startLoginWithFacebook: () => {}
+  startLoginWithGoogle: () => { },
+  startLoginWithFacebook: () => { }
 };
 
 LoginPage.propTypes = {

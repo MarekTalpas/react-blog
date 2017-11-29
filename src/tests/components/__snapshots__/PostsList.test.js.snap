@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render PostsList component with any posts properly 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Posts
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Posts
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <div
+      className="list-item list-item--message"
+    >
+      <span>
+        No Posts To Show
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render PostsList component with some posts properly 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Posts
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Posts
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <PostsListItem
+      content="this is post about react and redux."
+      createdAt={0}
+      id="1"
+      key="1"
+      title="react and redux"
+    />
+    <PostsListItem
+      content="this is post about javascript basics"
+      createdAt={259200000}
+      id="2"
+      key="2"
+      title="js basics"
+    />
+    <PostsListItem
+      content="this is post about node js and all its features"
+      createdAt={-259200000}
+      id="3"
+      key="3"
+      title="nodejs"
+    />
+  </div>
+</div>
+`;
