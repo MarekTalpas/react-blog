@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { DateRangePicker } from 'react-dates';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {
   setTextFilter,
@@ -62,6 +63,9 @@ export class PostsListFilters extends Component {
               showClearDates={true}
               isOutsideRange={() => false}
             />
+          </div>
+          <div className="page-header__actions">
+            <Link className="button"to="/create">Add Post</Link>
           </div>
         </div>
       </div>
