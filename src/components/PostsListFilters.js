@@ -34,13 +34,16 @@ export class PostsListFilters extends Component {
         <div className="input-group">
           <div className="input-group__item">
             <input
+              className="text-input"
               type="text"
+              placeholder="Search Posts"
               value={this.props.filters.text}
               onChange={this._onInputChange}
             />
           </div>
           <div className="input-group__item">
             <select
+              className="select"
               onChange={this._onSortChange}
               value={this.props.filters.sortBy}
             >
