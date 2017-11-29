@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render AddPostsPage properly 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Create Post
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <PostsForm
+      onSubmit={[Function]}
+      post={
+        Object {
+          "content": "",
+          "createdAt": 0,
+          "title": "",
+        }
+      }
+    />
+  </div>
+</div>
+`;

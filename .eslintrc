@@ -38,6 +38,7 @@
     "consistent-return": 0,
     "one-var": 0,
     "jsx-a11y/no-autofocus": 0,
-    "import/no-named-as-default-member": 0
+    "import/no-named-as-default-member": 0,
+    "one-var-declaration-per-line": 0
   }
 }

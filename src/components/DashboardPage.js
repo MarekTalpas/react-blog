@@ -1,10 +1,11 @@
 import React from 'react';
 import PostsListFilters from './PostsListFilters';
-import PostsForm from './PostsForm';
+import AddPostsPage from './AddPostsPage';
 
 const DashboardPage = () => (
   <div>
     <PostsListFilters />
+    <AddPostsPage />
   </div>
 );
 
