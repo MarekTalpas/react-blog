@@ -26,7 +26,11 @@ class PostsForm extends Component {
   _onCalendarFocusChange = ({ focused }) => {
     this.setState(() => ({ calendarFocused: focused }));
   };
-  _onDateChange = date => this.setState(() => ({ createdAt: date }));
+  _onDateChange = date => {
+    if (date) {
+      this.setState(() => ({ createdAt: date }));
+    }
+  }
   _onFormSubmit = (ev) => {
     ev.preventDefault();
 
