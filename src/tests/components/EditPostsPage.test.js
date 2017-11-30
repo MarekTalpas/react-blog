@@ -28,7 +28,24 @@ test('should handle form submission properly', () => {
 });
 
 test('should handle post removal properly', () => {
-  wrapper.find('button').simulate('click');
+  wrapper.find('button').at(2).simulate('click');
   expect(initiateRemovePostSpy).toHaveBeenLastCalledWith({ id: posts[1].id });
   expect(history.push).toHaveBeenLastCalledWith('/');
+});
+
+test('should open modal', () => {
+  wrapper.find('button').at(0).simulate('click');
+  expect(wrapper.state('modalIsOpen')).toBe(true);
+});
+
+test('should close modal on request close', () => {
+  wrapper.setState({ modalIsOpen: true });
+  wrapper.find('Modal').prop('onRequestClose')();
+  expect(wrapper.state('modalIsOpen')).toBe(false);
+});
+
+test('should close modal on button click', () => {
+  wrapper.setState({ modalIsOpen: true });
+  wrapper.find('button').at(1).simulate('click');
+  expect(wrapper.state('modalIsOpen')).toBe(false);
 });

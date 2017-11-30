@@ -17,8 +17,8 @@ export default (posts, {
     if (sortBy === 'date') {
       return (a.createdAt < b.createdAt) ? 1 : -1;
     } else if (sortBy === 'title') {
-      if (a.title.toLowerCase() < b.title.toLowerCase()) return 1;
-      if (a.title.toLowerCase() > b.title.toLowerCase()) return -1;
+      if (a.title.toLowerCase() < b.title.toLowerCase()) return -1;
+      if (a.title.toLowerCase() > b.title.toLowerCase()) return 1;
       return 0;
     }
   });

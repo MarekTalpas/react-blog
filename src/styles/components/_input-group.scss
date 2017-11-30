@@ -5,6 +5,10 @@
   @media (min-width: $desktop-breakpoint) {
     flex-direction: row;
     margin-bottom: $l-size;
+    
+    .page-header__actions {
+      margin-left: auto;
+    }
   }
 }
 

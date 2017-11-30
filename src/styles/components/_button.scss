@@ -9,8 +9,9 @@
   margin-bottom: $s-size;
   padding: $s-size;
   text-decoration: none;
-  width: 20rem;
+  text-align: center;
   transition: all .3s cubic-bezier(.25,.8,.25,1);
+  width: 20rem;
 
   &:hover {
     opacity: 0.8;
@@ -26,6 +27,11 @@
   }
 }
 
+.button__couple {
+  display: flex;
+  justify-content: space-around;
+}
+
 .button--link {
   background: none;
   margin-bottom: 0;
@@ -39,4 +45,10 @@
   position: relative;
   bottom: 7rem;
   left: 21.6rem;
+}
+
+.button--confirm {
+  width: 14rem;
+  margin-bottom: 0;
+  margin-top: $s-size;
 }

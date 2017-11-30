@@ -36,5 +36,57 @@ exports[`should render EditPostsPage component properly 1`] = `
       Remove Post
     </button>
   </div>
+  <Modal
+    ariaHideApp={true}
+    bodyOpenClassName="ReactModal__Body--open"
+    closeTimeoutMS={400}
+    contentLabel="Remove Post"
+    isOpen={false}
+    onRequestClose={[Function]}
+    parentSelector={[Function]}
+    portalClassName="ReactModalPortal"
+    shouldCloseOnOverlayClick={true}
+    style={
+      Object {
+        "content": Object {
+          "borderRadius": "3px",
+          "boxShadow": "0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)",
+          "margin": "$l-size $m-size",
+          "position": "none",
+          "textAlign": "center",
+          "width": "40rem",
+        },
+        "overlay": Object {
+          "alignItems": "center",
+          "display": "flex",
+          "height": "100vh",
+          "justifyContent": "center",
+          "width": "100vw",
+        },
+      }
+    }
+  >
+    <h1
+      className="box-layout__title"
+    >
+      Do you really want to remove this post ?
+    </h1>
+    <div
+      className="button__couple"
+    >
+      <button
+        className="button button--secondary button--confirm"
+        onClick={[Function]}
+      >
+        NO
+      </button>
+      <button
+        className="button button--confirm"
+        onClick={[Function]}
+      >
+        YES
+      </button>
+    </div>
+  </Modal>
 </div>
 `;

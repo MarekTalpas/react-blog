@@ -54,5 +54,5 @@ test('should sort by title', () => {
     endDate: undefined
   };
   const filteredPosts = getVisiblePosts(posts, filters);
-  expect(filteredPosts).toEqual([posts[0], posts[2], posts[1]]);
+  expect(filteredPosts).toEqual([posts[1], posts[2], posts[0]]);
 });
