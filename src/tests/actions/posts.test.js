@@ -43,7 +43,7 @@ test('should setup action for add post properly', () => {
 test('should add a new post to firebase', (done) => {
   const store = createMockStore(storeWithAuthReducer);
   const newPost = {
-    title: 'New Post',
+    title: 'Brand New Post',
     content: 'This is content of a new test post',
     createdAt: 0
   };
@@ -130,7 +130,7 @@ test('should setup action for edit post', () => {
 
 test('should update given value by id in firebase', (done) => {
   const { id } = postsData[1];
-  const update = { title: 'new changed title' };
+  const update = { title: 'brand new changed title' };
   const store = createMockStore(storeWithAuthReducer);
 
   store.dispatch(initiateEditPost(id, update)).then(() => {

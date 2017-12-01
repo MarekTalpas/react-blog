@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ReadPostPage component properly 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Read Post
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <h1 />
+    <p />
+  </div>
+</div>
+`;
+
+exports[`should render ReadPostPage component with props properly 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Read Post
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <h1 />
+    <p />
+  </div>
+</div>
+`;

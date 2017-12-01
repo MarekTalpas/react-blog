@@ -18,6 +18,18 @@ exports[`should render EditPostsPage component properly 1`] = `
   <div
     className="content-container"
   >
+    <Link
+      className="link link__read"
+      data-hover-label="READ HERE"
+      replace={false}
+      to="/read/2"
+    >
+      <span
+        className="link__read--label"
+      >
+        READ HERE
+      </span>
+    </Link>
     <PostsForm
       onSubmit={[Function]}
       post={

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import PostsForm from './PostsForm';
 import { initiateEditPost, initiateRemovePost } from '../actions/posts';
 
@@ -28,6 +29,10 @@ export class EditPostsPage extends Component {
   state = {
     modalIsOpen: false
   };
+  componentDidCatch(error, info) {
+    logErrorToMyService(error, info);
+    logComponentStackToMyService(info.componentStack);
+  }
   _openModal = () => {
     this.setState(() => ({ modalIsOpen: true }));
   };
@@ -51,6 +56,9 @@ export class EditPostsPage extends Component {
           </div>
         </div>
         <div className="content-container">
+          <Link data-hover-label="READ HERE" className="link link__read" to={`/read/${this.props.post.id}`}>
+            <span className="link__read--label">READ HERE</span>
+          </Link>
           <PostsForm onSubmit={this._handleFormSubmit} post={this.props.post} />
           <button
             className="button button--secondary button--remove"
@@ -92,7 +100,7 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  initiateEditPost: (post) => dispatch(initiateEditPost(post)),
+  initiateEditPost: (id, post) => dispatch(initiateEditPost(id, post)),
   initiateRemovePost: (id) => dispatch(initiateRemovePost(id))
 });
 

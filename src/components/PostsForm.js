@@ -38,12 +38,11 @@ class PostsForm extends Component {
       this.setState(() => ({ error: 'You have to provide content and title' }));
     } else {
       this.setState(() => ({ error: '' }));
-      const post = {
+      this.props.onSubmit({
         title: this.state.title,
         createdAt: this.state.createdAt.valueOf(),
         content: this.state.content
-      }
-      this.props.onSubmit(post);
+      });
     }
   };
   render() {
